@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+    我的电影列表
+</title>
+        <link rel="stylesheet" href="http://myphalcon2/css/app.css">
+        <script language="JavaScript" type="text/javascript" src="http://myphalcon2/js/jquery-2.1.4.min.js"></script>
+        <script language="JavaScript" type="text/javascript" src="http://myphalcon2/js/keymaster.js"></script>
+        <script language="JavaScript" type="text/javascript" src="http://myphalcon2/js/my.js"></script>
+	</head>
+	<body>
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">赵兵的电影</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+                                <li><a href="http://myphalcon2/movies">电影</a></li>
+                                <li><a href="http://myphalcon2/tags">标签</a></li>
+                                <li><a href="http://myphalcon2/sites">链接</a></li>
+                                <li><a href="http://myphalcon2/users">用户</a></li>
+                
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <form id="search-form" class="navbar-form navbar-left" role="search" action="http://myphalcon2/movies/search/" method="post">
+                        <div class="form-group">
+                                                        <input type="text" id="search" name="search" class="form-control" placeholder="Search" />                        </div>
+                        <button type="submit" class="btn btn-default">查询</button>
+                    </form>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+        
+
+
+    <div class="container">
+        <p><div class="alert alert-success">欢迎赵兵登录！你上次登录的时间是：11 seconds ago</div>
+</p>
+
+        <h1>电影列表</h1>
+
+
+        <div class="row">
+            <div class="col-md-10">
+                <div><span class="label label-primary">共计224部电影</span>--<span class="label label-primary">第1页/总23页</span></div>
+<nav>
+    <ul class="pager">
+        <li class="previous"><a href="http://myphalcon2/movies/page/1"><span aria-hidden="true">&larr;</span> 上一页</a></li>
+        <li class="next"><a href="http://myphalcon2/movies/page/2">下一页 <span aria-hidden="true">&rarr;</span></a></li>
+    </ul>
+</nav>
+
+
+
+    
+        
+        
+        
+    
+    
+        
+            
+            
+            
+            
+            
+        
+    
+
+
+
+   <div class="row">
+            <div class="col-md-5 movie-list">
+            <div class="col-md-4">
+                <a href="http://myphalcon2/movies/231"><img class="src" src="http://myphalcon2/./files/2015/08/23/1440323330d3f620896636c477b112f2ad384ea9cf.jpg" alt="我们的孩子足够坚强吗？中式学校  Are Our Kids Tough Enough? Chinese School (2015)"/></a>
+            </div>
+            <div class="col-md-8">
+                <div class="row"><h4>我们的孩子足够坚强吗？中式学校  Are Our Kids Tough Enough? Chinese School (2015)</h4></div>
+                <div class="row"></div>
+                <div class="row"></div>
+            </div>
+
+        </div>
+            <div class="col-md-5 movie-list">
+            <div class="col-md-4">
+                <a href="http://myphalcon2/movies/230"><img class="src" src="http://myphalcon2/./files/2015/08/23/14403231390a5994770f112743f701202195f205ec.jpg" alt="宇宙时空之旅 Cosmos: A SpaceTime Odyssey (2014)"/></a>
+            </div>
+            <div class="col-md-8">
+                <div class="row"><h4>宇宙时空之旅 Cosmos: A SpaceTime Odyssey (2014)</h4></div>
+                <div class="row">安·德鲁扬 / Seth MacFarlane</div>
+                <div class="row"></div>
+            </div>
+
+        </div>
+            <div class="col-md-5 movie-list">
+            <div class="col-md-4">
+                <a href="http://myphalcon2/movies/229"><img class="src" src="http://myphalcon2/./files/2015/08/23/14403223093a0e18018cddc3fe53aed5c861f2e1b0.jpg" alt="我们的父辈 Unsere Mütter, unsere Väter (2013)"/></a>
+            </div>
+            <div class="col-md-8">
+                <div class="row"><h4>我们的父辈 Unsere Mütter, unsere Väter (2013)</h4></div>
+                <div class="row">菲利普 · 卡德尔巴赫</div>
+                <div class="row"></div>
+            </div>
+
+        </div>
+            <div class="col-md-5 movie-list">
+            <div class="col-md-4">
+                <a href="http://myphalcon2/movies/228"><img class="src" src="http://myphalcon2/./files/2015/08/23/1440322040d1e120daa84f4c07ca0395de922cbe01.jpg" alt="寿司之神 Jiro Dreams of Sushi (2011)"/></a>
+            </div>
+            <div class="col-md-8">
+                <div class="row"><h4>寿司之神 Jiro Dreams of Sushi (2011)</h4></div>
+                <div class="row">大卫·贾柏</div>
+                <div class="row">2011-11-08(美国电影学院影展) / 2013-02-02(日本)</div>
+            </div>
+
+        </div>
+            <div class="col-md-5 movie-list">
+            <div class="col-md-4">
+                <a href="http://myphalcon2/movies/227"><img class="src" src="http://myphalcon2/./files/2015/08/23/14403185768ad1b3b8bf5b4dd91fd51932cc2057e8.jpg" alt="外滩佚事 (2010)"/></a>
+            </div>
+            <div class="col-md-8">
+                <div class="row"><h4>外滩佚事 (2010)</h4></div>
+                <div class="row">周兵</div>
+                <div class="row">2010-10-12</div>
+            </div>
+
+        </div>
+            <div class="col-md-5 movie-list">
+            <div class="col-md-4">
+                <a href="http://myphalcon2/movies/226"><img class="src" src="http://myphalcon2/./files/2015/08/21/14401414805a8fab8116ab52682270ed329ccc6a95.jpg" alt="真凶密码 Code of a Killer (2015)"/></a>
+            </div>
+            <div class="col-md-8">
+                <div class="row"><h4>真凶密码 Code of a Killer (2015)</h4></div>
+                <div class="row">James Strong</div>
+                <div class="row"></div>
+            </div>
+
+        </div>
+            <div class="col-md-5 movie-list">
+            <div class="col-md-4">
+                <a href="http://myphalcon2/movies/225"><img class="src" src="http://myphalcon2/./files/2015/08/21/1440138910192dc582c2c83ab73bf43eed2af86c38.jpg" alt="无声的证言 第一季 Silent Witness Season 1 (1996)"/></a>
+            </div>
+            <div class="col-md-8">
+                <div class="row"><h4>无声的证言 第一季 Silent Witness Season 1 (1996)</h4></div>
+                <div class="row">Bill Anderson / 哈里·胡克 / Harry Hook</div>
+                <div class="row"></div>
+            </div>
+
+        </div>
+            <div class="col-md-5 movie-list">
+            <div class="col-md-4">
+                <a href="http://myphalcon2/movies/224"><img class="src" src="http://myphalcon2/./files/2015/08/21/1440116968b8b7b213f3b44813c346242cfe9ce53e.jpg" alt="尸研所 The Body Farm (2011)"/></a>
+            </div>
+            <div class="col-md-8">
+                <div class="row"><h4>尸研所 The Body Farm (2011)</h4></div>
+                <div class="row">迪尔幕德·劳伦斯</div>
+                <div class="row"></div>
+            </div>
+
+        </div>
+            <div class="col-md-5 movie-list">
+            <div class="col-md-4">
+                <a href="http://myphalcon2/movies/223"><img class="src" src="http://myphalcon2/./files/2015/08/21/1440116396236b446c89a849ed25cfc4eea09c125d.jpg" alt="识骨寻踪 第九季 Bones Season 9 (2013)"/></a>
+            </div>
+            <div class="col-md-8">
+                <div class="row"><h4>识骨寻踪 第九季 Bones Season 9 (2013)</h4></div>
+                <div class="row"></div>
+                <div class="row"></div>
+            </div>
+
+        </div>
+            <div class="col-md-5 movie-list">
+            <div class="col-md-4">
+                <a href="http://myphalcon2/movies/222"><img class="src" src="http://myphalcon2/./files/2015/08/21/14401163909747aac250117f3520a16e84bcb56e1e.jpg" alt="识骨寻踪 第八季 Bones Season 8 (2012)"/></a>
+            </div>
+            <div class="col-md-8">
+                <div class="row"><h4>识骨寻踪 第八季 Bones Season 8 (2012)</h4></div>
+                <div class="row">Ian Toynton</div>
+                <div class="row"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+<nav>
+    <ul class="pager">
+        <li class="previous"><a href="http://myphalcon2/movies/page/1"><span aria-hidden="true">&larr;</span> 上一页</a></li>
+        <li class="next"><a href="http://myphalcon2/movies/page/2">下一页 <span aria-hidden="true">&rarr;</span></a></li>
+    </ul>
+</nav>
+            </div>
+            <div class="col-md-2">
+                <h2>标签</h2>
+                                
+                    <span><a href="http://myphalcon2/tags/12">动画片</a>(20)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/8">纪录片</a>(19)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/39">法医</a>(12)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/25">豪斯医生</a>(8)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/17">小叮当</a>(5)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/24">乔布斯</a>(4)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/26">动作</a>(4)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/34">拳击</a>(3)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/16">种族</a>(3)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/33">运动</a>(3)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/7">惊悚</a>(2)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/21">剧情</a>(2)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/23">贺岁片</a>(2)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/36">棒球</a>(2)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/14">纳粹</a>(2)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/27">传记</a>(2)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/22">文革</a>(1)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/35">教练</a>(1)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/9">蒙太奇</a>(1)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/10">草根</a>(1)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/38">DNA</a>(1)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/13">教育片</a>(1)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/41">环保</a>(1)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/15">科幻</a>(1)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/28">犯罪</a>(1)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/29">人性</a>(1)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/30">谣言</a>(1)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/18">篮球</a>(1)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/31">版权</a>(1)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/19">监狱</a>(1)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/32">医药</a>(1)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/6">人格分裂</a>(1)</span>
+                                
+                    <span><a href="http://myphalcon2/tags/20">死刑</a>(1)</span>
+                                
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+        
+    <div class="container">
+        <div class="row">
+            0.052002906799316        </div>
+    </div>
+
+    </body>
+</html>

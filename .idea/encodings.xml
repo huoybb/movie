@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/app/config/routes.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/controllers/MoviesController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/controllers/UsersController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/users/deleteTag.volt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/users/edit.volt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/users/showLinks.volt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/js/my.coffee" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tests/acceptance/HomePageCept.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tests/functional/MyFirstFunctionalCept.php" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
