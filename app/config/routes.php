@@ -17,7 +17,7 @@ $router->add('/movies/{movie:[0-9]+}/becomeSerial','Movies::becomeSerial')->setN
 
 $router->add('/movies/search/{search:[^/]+}','Movies::search')->setName('movies.search');
 $router->add('/movies/search/{search:[^/]+}/page/{page:[0-9]+}','Movies::search')->setName('movies.search.page');
-//更新episodes的信息，从kat网站抓取数据来更新本季数据
+//更新episodes的信息，从kat网站抓取数据来更新本季数据,
 $router->add('/movies/{movie:[0-9]+}/updateEpisodesInfo','Movies::updateEpisodesInfo')->setName('movies.updateEpisodesInfo');
 //链接相关的操作
 $router->add('/movies/{movie:[0-9]+}/links','Movies::showLinks')->setName('movies.movieLinks');
