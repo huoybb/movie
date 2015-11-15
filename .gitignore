@@ -15,6 +15,10 @@ $RECYCLE.BIN/
 *.msp
 
 # Windows shortcuts
+/public/files
+/public/temp
+/.gitignore
+/app/cache
 *.lnk
 
 # =========================
