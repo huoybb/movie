@@ -5,9 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/e__php_movie_app_views_calendar_mywatchlist.volt.php" afterPath="$PROJECT_DIR$/app/cache/e__php_movie_app_views_calendar_mywatchlist.volt.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/e__php_movie_app_views_movies_show.volt.php" afterPath="$PROJECT_DIR$/app/cache/e__php_movie_app_views_movies_show.volt.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/MoviesController.php" afterPath="$PROJECT_DIR$/app/controllers/MoviesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/WatchlistTrait.php" afterPath="$PROJECT_DIR$/app/models/WatchlistTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/movies/show.volt" afterPath="$PROJECT_DIR$/app/views/movies/show.volt" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,7 +47,7 @@
       <file leaf-file-name="WatchlistTrait.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/WatchlistTrait.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38019168">
+            <state vertical-scroll-proportion="0.38141027">
               <caret line="63" column="39" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="39" />
               <folding />
             </state>
@@ -521,7 +518,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447765372635</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="这里需要将那些剧目曾经看过做一个记录，以便能够了解哪些电视剧是看过的！">
+      <created>1447772330342</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1447772330342</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -542,7 +545,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.88440114" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48814505" sideWeight="0.5051414" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23264782" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48746517" sideWeight="0.49485862" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48814505" sideWeight="0.49485862" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20179948" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.357047" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17994858" sideWeight="0.51344085" order="1" side_tool="true" content_ui="tabs" />
@@ -970,7 +973,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/WatchlistTrait.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38019168">
+        <state vertical-scroll-proportion="0.38141027">
           <caret line="63" column="39" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="39" />
           <folding />
         </state>
