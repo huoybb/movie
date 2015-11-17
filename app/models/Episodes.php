@@ -86,6 +86,28 @@ class Episodes extends myModel
         return $query->execute();
     }
 
+    /**取出某部电视剧的所有episodes
+     * @param Serials $serial
+     * @return \Phalcon\Mvc\Model\ResultsetInterface
+     */
+    public static function getEpisodesFor(Serials $serial)
+    {
+        return self::query()
+            ->where('serial_id = :id:',['id'=>$serial->id])
+            ->orderBy('num')
+            ->execute();
+    }
+
+    public static function getLastUpdatedEpisodeFor(Serials $serial)
+    {
+        $now = (new Carbon())->now()->toDateTimeString();
+        return self::query()
+            ->where('serial_id = :id:',['id'=>$serial->id])
+            ->andWhere('date < :date:',['date'=>$now])
+            ->orderBy('num DESC')
+            ->execute()->getFirst();
+    }
+
 //    public static function getMyLatest($days = 1,Users $user = null)
 //    {
 //        $now = (new Carbon())->now()->toDateTimeString();

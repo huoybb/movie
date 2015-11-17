@@ -14,8 +14,8 @@
                     <th>#</th>
                     <th>时间</th>
                     <th>电影</th>
-                    <th>最后</th>
-                    <th>看到</th>
+                    <th>更新</th>
+                    <th>追到</th>
                     <th>状态</th>
                 </tr>
                 {% for row in movies %}
@@ -24,8 +24,8 @@
                         <td>{{ row.watchlist.updated_at.diffForHumans() }}</td>
                         <td><a href="{{ url(['for':'movies.show','movie':row.movies.id]) }}">{{ row.movies.title }}</a></td>
                         <td>
-                            {% if row.movies.getLastEpisode().id is not null %}
-                                <a href="{{ url(['for':'movies.showEpisode','movie':row.movies.id,'episode':row.movies.getLastEpisode().id]) }}">第{{ row.movies.getLastEpisode().num }}集:{{ row.movies.getLastEpisode().title}}</a>
+                            {% if row.movies.getLastUpdatedEpisode().id is not null %}
+                                <a href="{{ url(['for':'movies.showEpisode','movie':row.movies.id,'episode':row.movies.getLastUpdatedEpisode().id]) }}">第{{ row.movies.getLastUpdatedEpisode().num }}集:{{ row.movies.getLastUpdatedEpisode().title}}</a>
                             {% else %}
                                 \
                             {% endif %}

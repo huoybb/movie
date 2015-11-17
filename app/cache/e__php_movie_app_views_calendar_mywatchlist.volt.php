@@ -57,7 +57,7 @@
                     <th>#</th>
                     <th>时间</th>
                     <th>电影</th>
-                    <th>最后</th>
+                    <th>更新</th>
                     <th>看到</th>
                     <th>状态</th>
                 </tr>
@@ -67,8 +67,8 @@
                         <td><?php echo $row->watchlist->updated_at->diffForHumans(); ?></td>
                         <td><a href="<?php echo $this->url->get(array('for' => 'movies.show', 'movie' => $row->movies->id)); ?>"><?php echo $row->movies->title; ?></a></td>
                         <td>
-                            <?php if ($row->movies->getLastEpisode()->id != null) { ?>
-                                <a href="<?php echo $this->url->get(array('for' => 'movies.showEpisode', 'movie' => $row->movies->id, 'episode' => $row->movies->getLastEpisode()->id)); ?>">第<?php echo $row->movies->getLastEpisode()->num; ?>集:<?php echo $row->movies->getLastEpisode()->title; ?></a>
+                            <?php if ($row->movies->getLastUpdatedEpisode()->id != null) { ?>
+                                <a href="<?php echo $this->url->get(array('for' => 'movies.showEpisode', 'movie' => $row->movies->id, 'episode' => $row->movies->getLastUpdatedEpisode()->id)); ?>">第<?php echo $row->movies->getLastUpdatedEpisode()->num; ?>集:<?php echo $row->movies->getLastUpdatedEpisode()->title; ?></a>
                             <?php } else { ?>
                                 \
                             <?php } ?>
