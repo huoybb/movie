@@ -58,6 +58,12 @@ trait SerialableTrait
         if(!$this->getTVSerial()) return [];
         return $this->getSerial()->getEpisodes();
     }
+
+    public function getLastEpisode()
+    {
+        return $this->getSerial()->getLastEpisode();
+    }
+
     
     private $episodeNextOnTV = null;
     public function getEpisodeNextOnTV()
@@ -274,7 +280,7 @@ trait SerialableTrait
         return preg_replace('/(.+)第.+季(.+)Season.+/m', '$1$2',$movie->title);
     }
     private function getSeasonNumberFromMovie($movie){
-        return preg_replace('/.+第.+季.+Season.+([0-9]+)\s*\([0-9]+\)/m', '$1', $movie->title);
+        return preg_replace('/.+第.+季.+Season\s*([0-9]+)\s*\([0-9]+\)/m', '$1', $movie->title);
     }
 
 }

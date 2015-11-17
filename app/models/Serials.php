@@ -122,6 +122,15 @@ class Serials extends myModel
         }
         return $this->Episodes;
     }
+    private $lastEpisode = null;
+    public function getLastEpisode()
+    {
+        if(null == $this->lastEpisode) $this->lastEpisode =  Episodes::query()
+            ->where('serial_id = :id:',['id'=>$this->id])
+            ->orderBy('num DESC')
+            ->execute()->getFirst();
+        return $this->lastEpisode;
+    }
 
     public function getEpisodeNextOnTV()
     {
@@ -146,6 +155,9 @@ class Serials extends myModel
         }
         return $this->movie;
     }
+
+
+
 
     private $TVserial = null;
 
