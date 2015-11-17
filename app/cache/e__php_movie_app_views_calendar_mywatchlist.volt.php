@@ -58,7 +58,7 @@
                     <th>时间</th>
                     <th>电影</th>
                     <th>更新</th>
-                    <th>看到</th>
+                    <th>追到</th>
                     <th>状态</th>
                 </tr>
                 <?php foreach ($movies as $row) { ?>

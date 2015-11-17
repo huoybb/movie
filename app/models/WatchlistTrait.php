@@ -60,6 +60,21 @@ trait WatchlistTrait
         return $this->allWatchlist;
     }
 
+    private $watchedRecords = [];
+    public function getWatchedRecords()
+    {
+        if([]==$this->watchedRecords){
+            $this->watchedRecords = Watchlist::query()
+                ->leftJoin('Episodes','Episodes.id = Watchlist.currentEpisode_id')
+                ->where('Watchlist.movie_id = :movie:',['movie'=>$this->id])
+                ->andWhere('Watchlist.status = "done"')
+                ->columns(['Watchlist.*','Episodes.*'])
+                ->execute();
+        }
+        return $this->watchedRecords;
+    }
+
+
     /**便于将来自动删除相关的watchlist记录
      * @return $this
      */

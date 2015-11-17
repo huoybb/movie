@@ -269,6 +269,17 @@
     <?php echo $this->tag->endform(); ?>
 
 </div>
+
+                <?php if ($movie->getWatchedRecords()->count()) { ?>
+                    <div class="row">
+                        <h2>观看记录</h2>
+                        <ul>
+                            <?php foreach ($movie->getWatchedRecords() as $record) { ?>
+                                <li><?php echo $record->watchlist->updated_at->diffForHumans(); ?></li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                <?php } ?>
                 <?php if ($movie->isBeingWatched()) { ?>
                     <div class="row">
                         <h2>Last Watched</h2>

@@ -147,6 +147,17 @@
 
             <div class="col-md-2">
                 {% include 'movies/partials/_addlink_form.volt' %}
+
+                {% if movie.getWatchedRecords().count() %}
+                    <div class="row">
+                        <h2>观看记录</h2>
+                        <ul>
+                            {% for record in movie.getWatchedRecords() %}
+                                <li>{{ record.watchlist.updated_at.diffForHumans() }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
                 {% if movie.isBeingWatched() %}
                     <div class="row">
                         <h2>Last Watched</h2>

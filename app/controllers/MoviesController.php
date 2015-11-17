@@ -54,6 +54,7 @@ class MoviesController extends myController
 //            $m->addTag('人生七年');
 //        }
 //        dd($movie->getEpisodeNextOnTV());
+//        dd($movie->getWatchedRecords());
         $this->view->movie = $movie;
         $this->view->form = myForm::buildCommentForm($movie);
         $this->view->comments = $movie->comments();

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list id="1e6225ba-8086-4ca3-aa7a-8cec47859944" name="Rejected commit: Default" comment="修改抽取豆瓣电视剧第几季数据的正则表达式" />
-    <list default="true" id="ba941d19-7159-461d-994e-c828c095b49d" name="修改追看列表" comment="重构Serials与Episodes，修改追看视图，将最近更新内容增加进去&#10;&#10;主要是将最后更新的内容增加了进去，而不是预计有多少内容，以便于查看是否还有已经更新但没有追看的内容！">
+    <list default="true" id="89fad809-017d-45eb-972e-1d476f42f110" name="在movie页面显示追看的记录" comment="这里需要将那些剧目曾经看过做一个记录，以便能够了解哪些电视剧是看过的！">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/e__php_movie_app_views_calendar_mywatchlist.volt.php" afterPath="$PROJECT_DIR$/app/cache/e__php_movie_app_views_calendar_mywatchlist.volt.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/calendar/MyWatchList.volt" afterPath="$PROJECT_DIR$/app/views/calendar/MyWatchList.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/e__php_movie_app_views_movies_show.volt.php" afterPath="$PROJECT_DIR$/app/cache/e__php_movie_app_views_movies_show.volt.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/MoviesController.php" afterPath="$PROJECT_DIR$/app/controllers/MoviesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/WatchlistTrait.php" afterPath="$PROJECT_DIR$/app/models/WatchlistTrait.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/movies/show.volt" afterPath="$PROJECT_DIR$/app/views/movies/show.volt" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,11 +47,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyWatchList.volt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/calendar/MyWatchList.volt">
+      <file leaf-file-name="WatchlistTrait.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/WatchlistTrait.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.85897434">
-              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.38019168">
+              <caret line="63" column="39" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MoviesController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/MoviesController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.65384614">
+              <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.volt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/movies/show.volt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.076923">
+              <caret line="155" column="80" selection-start-line="155" selection-start-column="80" selection-end-line="155" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -113,13 +135,10 @@
         <option value="$PROJECT_DIR$/app/views/calendar/latest.volt" />
         <option value="$PROJECT_DIR$/app/models/Watchlist.php" />
         <option value="$PROJECT_DIR$/app/models/Movies.php" />
-        <option value="$PROJECT_DIR$/app/controllers/MoviesController.php" />
         <option value="$PROJECT_DIR$/app/views/movies/showEpisode.volt" />
         <option value="$PROJECT_DIR$/app/views/layouts/header.volt" />
         <option value="$PROJECT_DIR$/app/models/Users.php" />
         <option value="$PROJECT_DIR$/app/controllers/CalendarController.php" />
-        <option value="$PROJECT_DIR$/app/models/WatchlistTrait.php" />
-        <option value="$PROJECT_DIR$/app/views/movies/show.volt" />
         <option value="$PROJECT_DIR$/app/models/Vote.php" />
         <option value="$PROJECT_DIR$/app/models/Comments.php" />
         <option value="$PROJECT_DIR$/app/controllers/UsersController.php" />
@@ -132,6 +151,9 @@
         <option value="$PROJECT_DIR$/app/models/Serials.php" />
         <option value="$PROJECT_DIR$/app/models/Episodes.php" />
         <option value="$PROJECT_DIR$/app/views/calendar/MyWatchList.volt" />
+        <option value="$PROJECT_DIR$/app/models/WatchlistTrait.php" />
+        <option value="$PROJECT_DIR$/app/controllers/MoviesController.php" />
+        <option value="$PROJECT_DIR$/app/views/movies/show.volt" />
       </list>
     </option>
   </component>
@@ -206,6 +228,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -260,7 +283,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="calendar" />
+              <option name="myItemId" value="movies" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -317,7 +340,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -433,7 +455,8 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ba941d19-7159-461d-994e-c828c095b49d" name="修改追看列表" comment="在视图中增加了每部电视剧的最后一集的信息，这里的算法不是最优化的，需要有很多次的查询，将来看看怎么优化吧！" />
+      <changelist id="" name="修改追看列表" comment="在视图中增加了每部电视剧的最后一集的信息，这里的算法不是最优化的，需要有很多次的查询，将来看看怎么优化吧！" />
+      <changelist id="89fad809-017d-45eb-972e-1d476f42f110" name="在movie页面显示追看的记录" comment="这里需要将那些剧目曾经看过做一个记录，以便能够了解哪些电视剧是看过的！" />
       <created>1436689411409</created>
       <option name="number" value="Default" />
       <updated>1436689411409</updated>
@@ -492,7 +515,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447765044721</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="重构Serials与Episodes，修改追看视图，将最近更新内容增加进去&#10;&#10;主要是将最后更新的内容增加了进去，而不是预计有多少内容，以便于查看是否还有已经更新但没有追看的内容！">
+      <created>1447765372635</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1447765372635</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -508,12 +537,12 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18766066" sideWeight="0.48655915" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19280206" sideWeight="0.48655915" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32795697" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32795697" sideWeight="0.5025707" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.88440114" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48814505" sideWeight="0.5051414" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23264782" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48814505" sideWeight="0.4974293" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48746517" sideWeight="0.49485862" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20179948" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.357047" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17994858" sideWeight="0.51344085" order="1" side_tool="true" content_ui="tabs" />
@@ -570,7 +599,8 @@
     <MESSAGE value="修改了一些包含的设置，将一些文件剔除，以便不需要进行版本控制" />
     <MESSAGE value="修改追看列表的电视剧最后更新剧集" />
     <MESSAGE value="重构Serials与Episodes，修改追看视图，将最近更新内容增加进去&#10;&#10;主要是将最后更新的内容增加了进去，而不是预计有多少内容，以便于查看是否还有已经更新但没有追看的内容！" />
-    <option name="LAST_COMMIT_MESSAGE" value="重构Serials与Episodes，修改追看视图，将最近更新内容增加进去&#10;&#10;主要是将最后更新的内容增加了进去，而不是预计有多少内容，以便于查看是否还有已经更新但没有追看的内容！" />
+    <MESSAGE value="这里需要将那些剧目曾经看过做一个记录，以便能够了解哪些电视剧是看过的！" />
+    <option name="LAST_COMMIT_MESSAGE" value="这里需要将那些剧目曾经看过做一个记录，以便能够了解哪些电视剧是看过的！" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -580,13 +610,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/authTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.23077">
-          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Users.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22173913">
@@ -612,13 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-20.26923">
           <caret line="31" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/WatchlistTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5275363">
-          <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -668,13 +684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/movies/show.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09855072">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -773,7 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -847,20 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/MoviesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4238026">
-          <caret line="208" column="63" selection-start-line="208" selection-start-column="63" selection-end-line="208" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/codeception.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -927,6 +921,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/calendar/MyWatchList.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15407854">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.153846">
@@ -935,10 +936,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/calendar/MyWatchList.volt">
+    <entry file="file://$PROJECT_DIR$/app/models/Watchlist.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.85897434">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/MoviesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/movies/show.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.076923">
+          <caret line="155" column="80" selection-start-line="155" selection-start-column="80" selection-end-line="155" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/WatchlistTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38019168">
+          <caret line="63" column="39" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="39" />
           <folding />
         </state>
       </provider>
