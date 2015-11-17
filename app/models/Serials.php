@@ -1,5 +1,7 @@
 <?php
 
+use Carbon\Carbon;
+
 class Serials extends myModel
 {
 
@@ -114,21 +116,17 @@ class Serials extends myModel
     private $Episodes = null;
     public function getEpisodes()
     {
-        if(null == $this->Episodes){
-            $this->Episodes=Episodes::query()
-                ->where('serial_id = :id:',['id'=>$this->id])
-                ->orderBy('num')
-                ->execute();
+        if(null == $this->Episodes) {
+            $this->Episodes = Episodes::getEpisodesFor($this);
         }
         return $this->Episodes;
     }
     private $lastEpisode = null;
-    public function getLastEpisode()
+    public function getLastUpdatedEpisode()
     {
-        if(null == $this->lastEpisode) $this->lastEpisode =  Episodes::query()
-            ->where('serial_id = :id:',['id'=>$this->id])
-            ->orderBy('num DESC')
-            ->execute()->getFirst();
+        if(null == $this->lastEpisode) {
+            $this->lastEpisode =  Episodes::getLastUpdatedEpisodeFor($this);
+        }
         return $this->lastEpisode;
     }
 

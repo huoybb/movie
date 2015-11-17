@@ -59,9 +59,9 @@ trait SerialableTrait
         return $this->getSerial()->getEpisodes();
     }
 
-    public function getLastEpisode()
+    public function getLastUpdatedEpisode()
     {
-        return $this->getSerial()->getLastEpisode();
+        return $this->getSerial()->getLastUpdatedEpisode();
     }
 
     
