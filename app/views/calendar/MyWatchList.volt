@@ -16,7 +16,7 @@
                     <th>电影</th>
                     <th>更新</th>
                     <th>追到</th>
-                    <th>状态</th>
+                    <th>Next</th>
                 </tr>
                 {% for row in movies %}
                     <tr>
@@ -37,7 +37,13 @@
                                 \
                             {% endif %}
                         </td>
-                        <td>{{ row.watchlist.status }}</td>
+                        <td>
+                            {% if row.episodes.id is not null %}
+                                <a href="{{ url(['for':'movies.showEpisode','movie':row.movies.id,'episode':row.episodes.getNext().id]) }}">第{{ row.episodes.getNext().num }}集</a>
+                            {% else %}
+                                \
+                            {% endif %}
+                        </td>
                     </tr>
                 {% endfor %}
             </table>

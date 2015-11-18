@@ -59,7 +59,7 @@
                     <th>电影</th>
                     <th>更新</th>
                     <th>追到</th>
-                    <th>状态</th>
+                    <th>Next</th>
                 </tr>
                 <?php foreach ($movies as $row) { ?>
                     <tr>
@@ -80,7 +80,13 @@
                                 \
                             <?php } ?>
                         </td>
-                        <td><?php echo $row->watchlist->status; ?></td>
+                        <td>
+                            <?php if ($row->episodes->id != null) { ?>
+                                <a href="<?php echo $this->url->get(array('for' => 'movies.showEpisode', 'movie' => $row->movies->id, 'episode' => $row->episodes->getNext()->id)); ?>">第<?php echo $row->episodes->getNext()->num; ?>集</a>
+                            <?php } else { ?>
+                                \
+                            <?php } ?>
+                        </td>
                     </tr>
                 <?php } ?>
             </table>

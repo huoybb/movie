@@ -19,6 +19,7 @@ $RECYCLE.BIN/
 /public/files
 /public/temp
 /.gitignore
+/.phalcon
 /app/cache
 *.lnk
 
