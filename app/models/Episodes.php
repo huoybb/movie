@@ -73,10 +73,10 @@ class Episodes extends myModel
             ->leftJoin('Movies','Movies.id = Serials.movie_id')
             ->leftJoin('Links','Links.linkable_type = "Episodes" AND Links.linkable_id = Episodes.id')
             ->leftJoin('Comments','Comments.commentable_type = "Episodes" AND Comments.commentable_id = Episodes.id')
-            ->groupBy('Episodes.id')
             ->columns(['Episodes.*','Movies.*','Links.*','count(Comments.id) AS commentsCount'])
             ->where('date < :date:',['date'=>$now])
             ->andWhere('date > :then:',['then'=>$then])
+            ->groupBy('Serials.id')
             ->orderBy('date DESC');
 //            ->limit(50)
         if(null != $user){
