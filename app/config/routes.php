@@ -79,6 +79,7 @@ $router->add('/sites/{site:[0-9]+}/addComment','Sites::addComment')->setName('si
 $router->add('/sites/{site:[0-9]+}/comments/{comment:[0-9]+}/edit','Sites::editComment')->setName('sites.editComment');
 $router->add('/sites/{site:[0-9]+}/comments/{comment:[0-9]+}/delete','Sites::deleteComment')->setName('sites.deleteComment');
 
+//验证、权限相关操作
 $router->add('/auth/resource2roles','Auth::resource2roles')->setName('auth.resource2roles');
 $router->addx('/auth/login','Auth::login',['loginValidator'])->setName('auth.login');
 $router->addx('/auth/logout','Auth::logout',['loginValidator'])->setName('auth.logout');
