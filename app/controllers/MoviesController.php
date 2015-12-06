@@ -62,7 +62,11 @@ class MoviesController extends myController
     public function editAction(Request $request,Movies $movie)
     {
         if($request->isPost()){
-            $movie->update($request->getPost());
+            $data = $request->getPost();
+            if (preg_match('%^https?://%m', $data['poster'])) {
+                $data['poster']=(new getpic())->get($data['poster']);
+            }
+            $movie->update($data);
             return $this->redirectByRoute(['for'=>'movies.show','movie'=>$movie->id]);
         }else{
             $this->view->form = $this->buildFormFromModel($movie);
