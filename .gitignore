@@ -13,15 +13,16 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
-/vendor
 
 # Windows shortcuts
+/vendor
 /public/files
 /public/temp
 /.gitignore
 /.phalcon
 /app/cache
 *.lnk
+/.idea/workspace.xml
 
 # =========================
 # Operating System Files
