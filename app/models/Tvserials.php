@@ -215,7 +215,7 @@ class Tvserials extends myModel
 
     public function isOnTheAir()
     {
-        return $this->end == 'Present';
+        return $this->end == 'Present' OR $this->end == null;
     }
 
     /**

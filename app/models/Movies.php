@@ -204,6 +204,12 @@ class Movies extends myModel implements KeywordableInterface
         return '<a href="'.$this->getDI()->getShared('url')->get(['for'=>'movies.show','movie'=>$this->id]).'">'.$this->__toString().'</a>';
     }
 
+    public function isUpdateable()
+    {
+        return $this->isAiring() AND $this->isSerialable() AND $this->isLastSeason();
+    }
+
+
 
 
 

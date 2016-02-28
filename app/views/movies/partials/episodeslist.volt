@@ -1,7 +1,7 @@
 {% if movie.getEpisodes() %}
 <div class="row">
     <h2>剧集
-        {% if movie.isSerialable() AND movie.isLastSeason() AND movie.isAiring() %}
+        {% if movie.isUpdateable() %}
             <span><a href="{{ url(['for':'movies.updateEpisodesInfo','movie':movie.id]) }}">更新</a></span>
             {% if movie.getTVSerial().getFirstKATLink() %}
                 <span><a href="{{ movie.getTVSerial().getFirstKATLink().url }}" target="_blank">KAT</a></span>

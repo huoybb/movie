@@ -14,47 +14,7 @@ class MoviesController extends myController
 
     public function showAction(Movies $movie)
     {
-//        $kat = new KickAssTorrent();
-//        dd($kat->parseTVSerialsinfo('https://kat.cr/the-blacklist-tv16791/'));
-//        dd($movie->getEpisodes()->toArray());
-
-//        dd($movie->getTVSerial()->id);
-
-//        $links = Links::find();
-//        foreach($links as $link){
-//            $link->linkable_type = get_class($movie);
-//            $link->save();
-//        }
-
-//        dd(Carbon::createFromTimestamp(strtotime('Tuesday, Oct 27 2015'))->isTuesday());
-
-        //如何将两个collection合并起来呢？
-//        $episodes = $movie->getEpisodes();
-//        $ids = [];
-//        foreach($episodes as $epi){
-//            $ids[]=$epi->id;
-//        }
-////        dd($ids);
-//        $comments = Comments::query()
-//            ->where('commentable_type = :type:',['type'=>'Episodes'])
-//            ->inWhere('commentable_id',$ids)
-//            ->execute();
-////        iterator_to_array($comments)
-////        dd($comments);
-//        dd($movie->getEpisodesComments()->toArray());
-
-        //为什么不能够直接在这个网站上进行命令行的操作呢？laravel做到了，能够让人很方便的将最近的一些数据对象操作起来
-//        $movies = Movies::query()
-//            ->where('title like :keyword:',['keyword'=>'%七年%'])
-//            ->execute();
-//
-////        dd($movies->toArray());
-//        foreach($movies as $m){
-//            /** @var Movies $m */
-//            $m->addTag('人生七年');
-//        }
-//        dd($movie->getEpisodeNextOnTV());
-//        dd($movie->getWatchedRecords());
+//        dd($movie->isAiring());
         $this->view->movie = $movie;
         $this->view->form = myForm::buildCommentForm($movie);
         $this->view->comments = $movie->comments();
