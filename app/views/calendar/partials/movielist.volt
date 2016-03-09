@@ -13,8 +13,8 @@
             <td>{{ row.episodes.id }}</td>
             <td>{{ row.episodes.date.diffForHumans() }}</td>
             <td>{{ row.episodes.date.format('l') }}</td>
-            <td><a href="{{ url(['for':'movies.show','movie':row.movies.id]) }}">{{ row.movies.title }}</a></td>
-            <td><a href="{{ url(['for':'movies.showEpisode','movie':row.movies.id,'episode':row.episodes.id]) }}">第{{ row.episodes.num }}集:{{ row.episodes.title}}</a></td>
+            <td><div class="titleCSS"><a href="{{ url(['for':'movies.show','movie':row.movies.id]) }}">{{ row.movies.title }}</a></div></td>
+            <td><div class="titleCSS"><a href="{{ url(['for':'movies.showEpisode','movie':row.movies.id,'episode':row.episodes.id]) }}">第{{ "%'02d" | format(row.episodes.num) }}集：{{ row.episodes.title}}</a></div></td>
             <td>
                 {{ row.commentsCount }}
             </td>
