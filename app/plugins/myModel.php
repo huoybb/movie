@@ -96,5 +96,13 @@ abstract class myModel extends Model{
         return get_class($this).'::'.$this->id;
     }
 
+    public static function getDataTypes()
+    {
+        $instance  = new static();
+        $meta = $instance->getModelsMetaData();
+        $types = $meta->getDataTypes($instance);
+        return $types;
+    }
+
 
 } 

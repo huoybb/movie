@@ -13,7 +13,7 @@ $router->add('/movies/page/{page:[0-9]+}','Movies::index')->setName('index.page'
 
 $router->add('/movies','Movies::index')->setName('movies.index');
 $router->add('/movies/{movie:[0-9]+}','Movies::show')->setName('movies.show');
-$router->addx('/movies/{movie:[0-9]+}/edit','Movies::edit',['MovieValidator'])->setName('movies.edit');
+$router->addx('/movies/{movie:[0-9]+}/edit','Movies::edit',[MovieValidator::class])->setName('movies.edit');
 $router->add('/movies/{movie:[0-9]+}/delete','Movies::delete')->setName('movies.delete');
 $router->add('/movies/{movie:[0-9]+}/becomeSerial','Movies::becomeSerial')->setName('movies.becomeSerial');
 
@@ -24,19 +24,19 @@ $router->add('/movies/{movie:[0-9]+}/updateEpisodesInfo','Movies::updateEpisodes
 //链接相关的操作
 $router->add('/movies/{movie:[0-9]+}/links','Movies::showLinks')->setName('movies.movieLinks');
 $router->add('/movies/{movie:[0-9]+}/links/{link:[0-9]+}/delete','Movies::deleteLinks')->setName('movies.deleteLink');
-$router->addx('/movies/{movie:[0-9]+}/addlink','Movies::addLink',['LinkValidator'])->setName('movies.addLink');
+$router->addx('/movies/{movie:[0-9]+}/addlink','Movies::addLink',[LinkValidator::class])->setName('movies.addLink');
 //评论相关的操作
 $router->add('/movies/comments','Movies::showCommentList')->setName('movies.showCommentLis');
-$router->addx('/movies/{movie:[0-9]+}/addComment','Movies::addComment',['CommentValidator'])->setName('movies.addComment');
-$router->addx('/movies/{movie:[0-9]+}/comments/{comment:[0-9]+}/edit','Movies::editComment',['CommentValidator','HasAuthorityValidator:comment'])->setName('movies.editComment');
-$router->addx('/movies/{movie:[0-9]+}/comments/{comment:[0-9]+}/delete','Movies::deleteComment',['HasAuthorityValidator:comment'])->setName('movies.deleteComment');
+$router->addx('/movies/{movie:[0-9]+}/addComment','Movies::addComment',[CommentValidator::class])->setName('movies.addComment');
+$router->addx('/movies/{movie:[0-9]+}/comments/{comment:[0-9]+}/edit','Movies::editComment',[CommentValidator::class,HasAuthorityValidator::class.':comment'])->setName('movies.editComment');
+$router->addx('/movies/{movie:[0-9]+}/comments/{comment:[0-9]+}/delete','Movies::deleteComment',[HasAuthorityValidator::class.':comment'])->setName('movies.deleteComment');
 //收藏相关的操作
 $router->add('/movies/{movie:[0-9]+}/addFavorite','Movies::addFavorite')->setName('movies.addFavorite');
 $router->add('/movies/{movie:[0-9]+}/deleteFavorite','Movies::deleteFavorite')->setName('movies.deleteFavorite');
 //与电视剧的标签相关的操作
-$router->addx('/movies/{movie:[0-9]+}/addTag','Movies::addTag',['TagValidator'])->setName('movies.addTag');
+$router->addx('/movies/{movie:[0-9]+}/addTag','Movies::addTag',[TagValidator::class])->setName('movies.addTag');
 $router->add('/movies/{movie:[0-9]+}/tags','Movies::showTags')->setName('movies.showTags');
-$router->addx('/movies/{movie:[0-9]+}/taggable/{taggable:[0-9]+}/delete','Movies::deleteTag',['HasAuthorityValidator:taggable'])->setName('movies.deleteTag');
+$router->addx('/movies/{movie:[0-9]+}/taggable/{taggable:[0-9]+}/delete','Movies::deleteTag',[HasAuthorityValidator::class.':taggable'])->setName('movies.deleteTag');
 
 //与电视剧的季数相关的操作，应该是season，这里用serial来表示
 $router->add('/movies/{movie:[0-9]+}/addSerialTo/{anotherMovie:[0-9]+}','Movies::addSerialTo')->setName('movies.addSerialTo');
@@ -83,8 +83,8 @@ $router->add('/sites/{site:[0-9]+}/comments/{comment:[0-9]+}/delete','Sites::del
 
 //验证、权限相关操作
 $router->add('/auth/resource2roles','Auth::resource2roles')->setName('auth.resource2roles');
-$router->addx('/auth/login','Auth::login',['loginValidator'])->setName('auth.login');
-$router->addx('/auth/logout','Auth::logout',['loginValidator'])->setName('auth.logout');
+$router->addx('/auth/login','Auth::login',[loginValidator::class])->setName('auth.login');
+$router->addx('/auth/logout','Auth::logout',[loginValidator::class])->setName('auth.logout');
 
 //UserController相关路由
 $router->add('/users','Users::index')->setName('users.index');
@@ -96,11 +96,11 @@ $router->add('/users/{user:[0-9]+}/comments','Users::showComments')->setName('us
 $router->add('/users/{user:[0-9]+}/tags/page/{page:[0-9]+}','Users::showTags')->setName('users.showTags.page');
 $router->add('/users/{user:[0-9]+}/tags','Users::showTags')->setName('users.showTags');
 
-$router->addx('/users/{user:[0-9]+}/tags/{tag:[0-9]+}/delete','Users::deleteTag',['HasAuthorityValidator:tag'])->setName('users.deleteTag');
+$router->addx('/users/{user:[0-9]+}/tags/{tag:[0-9]+}/delete','Users::deleteTag',[HasAuthorityValidator::class.':tag'])->setName('users.deleteTag');
 
 $router->add('/users/{user:[0-9]+}/links/{page:[0-9]+}','Users::showLinks')->setName('users.showLinks');
 $router->add('/users/{user:[0-9]+}/links','Users::showLinks')->setName('users.showLinks');
-$router->addx('/users/{user:[0-9]+}/links/{link:[0-9]+}/delete','Users::deleteLink',['HasAuthorityValidator:link'])->setName('users.deleteLink');
+$router->addx('/users/{user:[0-9]+}/links/{link:[0-9]+}/delete','Users::deleteLink',[HasAuthorityValidator::class.':link'])->setName('users.deleteLink');
 
 $router->add('/users/{user:[0-9]+}/favorites/page/{page:[0-9]+}','Users::showFavorites')->setName('users.showFavorites');
 $router->add('/users/{user:[0-9]+}/favorites','Users::showFavorites')->setName('users.showFavorites');
@@ -120,7 +120,7 @@ $router->add('/tvserials/{tvserial:[0-9]+}','Tvserial::show')->setName('tvserial
 $router->add('/tvserials/{tvserial:[0-9]+}/addlink','Tvserial::addLink')->setName('tvserials.addLink');
 $router->add('/tvserials/{tvserial:[0-9]+}/updateEpisodes/{link:[0-9]+}','Tvserial::updateEpisodes')->setName('tvserials.updateEpisodes');
 
-$router->add('/episodes/{episode:[0-9]+}/addComment','Episodes::addComment')->setName('episodes.addComment');
+$router->addx('/episodes/{episode:[0-9]+}/addComment','Episodes::addComment',[CommentValidator::class])->setName('episodes.addComment');
 $router->add('/episodes/{episode:[0-9]+}/comments/{comment:[0-9]+}/edit','Episodes::editComment')->setName('episodes.editComment');
 $router->add('/episodes/{episode:[0-9]+}/comments/{comment:[0-9]+}/delete','Episodes::deleteComment')->setName('episodes.deleteComment');
 

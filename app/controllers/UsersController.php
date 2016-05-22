@@ -50,6 +50,7 @@ class UsersController extends myController
 
     public function showLinksAction(Users $user,$page =1)
     {
+//        dd($user->links());
         $this->view->user = $user;
         $this->view->page = $this->getPaginator($user->links(),15,$page);
     }

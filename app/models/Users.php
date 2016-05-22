@@ -120,13 +120,18 @@ class Users extends myModel
     }
 
     private $links = null;
+
+    /**
+     * @todo 将links中的项目进行改变，增加例如ObjectName，一些操作，以便能够减少这种联合查询的问题，减少查询时间？
+     * @return null|\Phalcon\Mvc\Model\ResultsetInterface
+     */
     public function links()
         //这里的效率比下面的tags()要高不少，看起来还是值得将来参考的！
     {
         if (null == $this->links) {
             $this->links = Links::query()
                 ->where('user_id = :user:',['user'=>$this->id])
-                ->leftJoin('Movies','Movies.id = Links.movie_id')
+                ->leftJoin('Movies','Movies.id = Links.linkable_id AND Links.linkable_type = "Movies"')
                 ->leftJoin('Sites','Sites.id = Links.site_id')
                 ->columns([
                     'Links.id',
