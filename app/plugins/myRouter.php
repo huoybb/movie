@@ -113,6 +113,7 @@ class myRouter extends Router{
                     $data = $dispatcher->getParam($data);
                 }
 
+                /** @var myValidation $validator */
                 $validator = new $validator();
 
                 if(!$validator->isValid($data)){

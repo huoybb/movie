@@ -7,7 +7,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9">
-                <h4>{{ movie.title }}</h4>
+                <ol class="breadcrumb">
+                    <li><a href="{{ url(['for':'tvserials.index']) }}">电视剧</a></li>
+                    <li><a href="{{ url(['for':'movies.show','movie':movie.id]) }}">{{ movie.title }}</a></li>
+                </ol>
                 <div class="row">
                     <div class="col-md-12">
                         <h2>S{{ "%'.02d"|format(episode.getSerial().serial_num) }}E{{"%'.02d"|format(episode.num) }}：{{ episode.title }}</h2>
