@@ -256,7 +256,7 @@ class MoviesController extends myController
     public function addLinkToEpisodeAction($movie,Episodes $episode)
     {
         $episode->addLinkBy($this->auth,$this->request->getPost()['url']);
-        return $this->redirectByRoute(['for'=>'movies.showEpisode','movie'=>$movie,'episode'=>$episode->id]);
+        return $this->redirectBack();
     }
 
     public function deleteLinkFromEpisodeAction($movie,$episode,Links $link)
