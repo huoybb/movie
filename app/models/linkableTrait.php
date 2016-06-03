@@ -32,7 +32,7 @@ trait linkableTrait
     public function addLinkBy(Users $byUser,$url)
     {
         if(!$url) return false;
-        if(!preg_match('%^http://pan\.baidu\.com%sm', $url)){
+        if(!preg_match('%^https?:%sm', $url)){
             $url = 'http://pan.baidu.com/disk/home#search/key='.$url;
         }
         $data = array(
